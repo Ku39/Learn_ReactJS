@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Counter = () => {
+const Counter = (props) => {
     const [likes, setstate] = useState(0);
     function plus(){
         setstate(likes+1)
@@ -11,6 +11,7 @@ const Counter = () => {
     }
     return (
         <div className="App">
+            <h1>{props.arg.name}</h1>
             <h1>{likes}</h1>
             <button onClick={plus}>Plus</button>
             <button onClick={minus}>Minus</button>

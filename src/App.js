@@ -48,15 +48,67 @@ import styles from "./styles/App.css"
 //     )
 // }
 
-// Пропсы
+// Пропсы arg= название пропса
+// function App(){
+//     return(
+//         <div className="App">
+//             <Propsuse arg={{name:"asd"}}/>
+//         </div>
+//     )
+// }
+
+// Много пропсов в массиве
+// function App(){
+//     const[arr, setarr] = useState([
+//         {name:"one"},
+//         {name:"two"},
+//         {name:"three"},
+//         {name:"for"},
+//     ]);
+
+//     return(
+//         <div className="App">
+//             {arr.map((item) => <Propsuse arg={item}/>)}
+//         </div>
+//     )
+// }
+
+
 function App(){
     return(
         <div className="App">
-            <Propsuse/>
+            asfasf
         </div>
     )
 }
+// function App(){
+//     return(
+//         <div className="App">
 
+//         </div>
+//     )
+// }
+// function App(){
+//     return(
+//         <div className="App">
+
+//         </div>
+//     )
+// }
+// function App(){
+//     return(
+//         <div className="App">
+
+//         </div>
+//     )
+// }
+// function App(){
+//     return(
+//         <div className="App">
+
+//         </div>
+//     )
+// }
 // function App(){
 //     return(
 //         <div className="App">

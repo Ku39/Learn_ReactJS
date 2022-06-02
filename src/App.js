@@ -75,6 +75,7 @@ import PostList from "./components/PostList";
 
 import PostForm from "./components/postForm";
 import MySelect from "./components/UI/Select/MySelect";
+import MyInput from "./components/UI/input/MyInput";
 
 function App(){
     const [posts, setPosts] = useState([
@@ -84,8 +85,8 @@ function App(){
         {id:4, title:"dd", body:"TJavascript is language programm"},
         
     ])
-
-    const [SelectedSort, setSelectedSort] = useState('')
+    const [SelectedSort, setSelectedSort] = useState('');
+    const [search, setSeach] = useState('')
 
     const createPost = (NewPost)=>{
         setPosts([...posts, NewPost])
@@ -105,6 +106,10 @@ function App(){
         <div className="App">
             <PostForm create ={createPost}/>
             <hr style={{margin: "15px 0"}}></hr>
+            <MyInput
+                placeholder="Поиск"
+                value = {search}
+            />
             <MySelect
                 value={SelectedSort}
                 onChange={sortPosts}

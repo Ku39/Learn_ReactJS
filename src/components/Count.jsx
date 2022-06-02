@@ -1,22 +1,23 @@
 import React from "react";
 import { useState } from "react";
+import styles from "../styles/App.css"
 
-const Counter = () => {
-    const [likes, setstate] = useState(0);
-    function plus(){
-        setstate(likes+1)
-    }
+const Counter = (props) => {
 
-    function minus(){
-        setstate(likes-1)
-    }
     return (
-        <div className="App">
-            <h1>{likes}</h1>
-            <button onClick={plus}>Plus</button>
-            <button onClick={minus}>Minus</button>
+        <div className="post">
+            <div className="post_context">
+                <strong>{props.number}. {props.props.title}</strong>
+                <div>
+                    {props.props.body}
+                </div>
+            </div>
+            <div className="btns">
+                <button>Delete</button>
+
+            </div>
         </div>
-    );
+    )
 }
 
 export default Counter

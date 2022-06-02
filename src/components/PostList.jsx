@@ -3,14 +3,12 @@ import { useState } from "react";
 import styles from "../styles/App.css"
 import Counter from "./Count"
 
-const PostList = (props) => {
-    
-
+const PostList = ({posts, title, remove}) => {
     return (
         <div className="App">
-            <h1 style={{textAlign: "center"}}>{props.title}</h1>
-            {props.posts.map((item, index) => 
-                <Counter number = {index+1} props = {item} key = {item.id}/>
+            <h1 style={{textAlign: "center"}}>{title}</h1>
+            {posts.map((item, index) => 
+                <Counter remove = {remove} number = {index+1} title = {item} key = {item.id}/>
             )}
         </div>
     )
